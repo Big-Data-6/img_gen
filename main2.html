@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=2000, height=1200">
+    <title>이미지 생성</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>이미지 생성 페이지</h1>
+    </header>
+    <div class="navbar">
+        <ul>
+            <li><a href="main.html">txt2img</a></li>
+            <li><a href="main2.html">img2img</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="left"> 
+            <div class="panel">
+                입력 프롬프트
+                <input type="text" placeholder="문자를 입력하세요">
+            </div>
+            <div class="panel">
+                제외 입력 프롬프트
+                <input type="text" placeholder="문자를 입력하세요">
+
+            </div>
+            <div class="panel">
+                파라미터 조절
+                <div class="parameter">
+                    <div class="grid-parameter">
+                        num_inference_steps
+                        <input type="number" placeholder="숫자를 입력하세요">
+                    </div>
+                    <div class="grid-parameter">
+                    num_images_per_prompt
+                    <input type="number" placeholder="숫자를 입력하세요">
+                    </div>
+                    <div class="grid-parameter">
+                        guidance_scale
+                        <input type="number" placeholder="숫자를 입력하세요">
+                    </div>
+                    <div class="grid-parameter">
+                        seed
+                        <input type="number" placeholder="숫자를 입력하세요">
+                    </div>
+                    <div class="grid-parameter">
+                        batch_size
+                        <input type="number" placeholder="숫자를 입력하세요">    
+                    </div>
+                    <div class="grid-parameter">
+                        batch_count
+                        <input type="number" laceholder="숫자를 입력하세요">
+                    </div> 
+                </div>
+            </div>
+            <div class="panel">
+                이미지 불러오기
+                <div class="imgbtn">
+                    <input type="file" accept="image/*" id="imageInput" style="display: none;">
+                    <label for="imageInput" class="image-upload-button">이미지 불러오기</label>
+                </div>
+                <div class="img_load">
+                    <!-- <img id="previewImage" src="#" alt="이미지 미리보기"> -->
+                    <img id="previewImage" src="" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="panel">결과 화면</div>
+            <div class="img_re">
+                <div class="result"></div>
+            </div>
+            <div class="btn">
+                <button class="runninig">running</button>
+                <button class="save">save</button>
+            </div>
+        </div>
+    </div>
+    <script src="main2.js"></script>
+</body>
+</html>
